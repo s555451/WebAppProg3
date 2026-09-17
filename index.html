@@ -5,6 +5,119 @@
     <title>Web Apps Assignment 3 - Obora Stephen Efurhievwe</title>
 </head>
 <body>
+
+    <p><a href="bonus.html">BONUS</a></p>
+
     <h1>Obora Stephen Efurhievwe</h1>
+
+    <!-- Part 4: Favorite Actor -->
+    <h2>Favorite Actor</h2>
+    <h3>Denzel Washington</h3>
+    <p>
+        I admire <b>Denzel Washington</b> because of his extraordinary ability to command the screen in every role he plays. His performances in iconic films like <b>Training Day</b> show a level of dedication and versatility that makes him one of the greatest actors of all time.
+    </p>
+
+    <!-- Parts 5 & 6: Lists -->
+    <hr>
+    <h2>Tasks & Favorite Music</h2>
+
+    <h3>Instructions: How to Make French Toast</h3>
+    <ol>
+        <li>Whisk eggs, milk, and cinnamon in a shallow bowl.
+            <ol>
+                <li>Use 2 fresh eggs per cup of milk.</li>
+                <li>Add a pinch of nutmeg if desired.</li>
+            </ol>
+        </li>
+        <li>Dip slices of bread into the mixture until saturated.</li>
+        <li>Cook on a hot, buttered skillet until golden brown.</li>
+    </ol>
+
+    <h3>Favorite Songs</h3>
+    <ul>
+        <li>"Lose Yourself" by Eminem</li>
+        <li>"Hallelujah" by Leonard Cohen
+            <ul>
+                <li>Jeff Buckley</li>
+                <li>Rufus Wainwright</li>
+            </ul>
+        </li>
+        <li>"Starboy" by The Weeknd</li>
+    </ul>
+
+    <!-- Part 7 Link -->
+    <p><a href="myCity.html">Learn more about my favorite city</a></p>
+
+    <!-- Part 8: Table Section -->
+    <hr>
+    <h2>Travel Destinations</h2>
+    <p>Below is a table of four exciting cities I would love to visit in the near future, along with the distance and travel cost starting from my favorite city, Lagos.</p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Reason for Visiting</th>
+                <th>Distance from Lagos</th>
+                <th>Estimated Travel Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tokyo</td>
+                <td>To experience rich culture, cutting-edge technology, and vibrant street life.</td>
+                <td>13,500 km</td>
+                <td>$1,500</td>
+            </tr>
+            <tr>
+                <td>London</td>
+                <td>To visit historic landmarks, museums, and experience the iconic music scene.</td>
+                <td>5,000 km</td>
+                <td>$800</td>
+            </tr>
+            <tr>
+                <td>Paris</td>
+                <td>To explore world-famous art galleries, architecture, and culinary traditions.</td>
+                <td>4,700 km</td>
+                <td>$850</td>
+            </tr>
+            <tr>
+                <td>Toronto</td>
+                <td>To enjoy diverse multicultural neighborhoods and landmarks like the CN Tower.</td>
+                <td>8,900 km</td>
+                <td>$1,100</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Part 9: Code Snippet -->
+    <hr>
+    <h2>Code Snippet: LinkedList</h2>
+    <p>This snippet demonstrates a custom LinkedList class in Java, including double-linked node navigation and list operations.</p>
+    <p>Source link: <a href="https://www.cs.utexas.edu/~scottm/cs314/code/">UT Austin CS314 Code Examples - LinkedList</a></p>
+
+    <pre>
+public class LinkedList&lt;E&gt; implements Iterable&lt;E&gt; {
+    private DoubleListNode&lt;E&gt; head;
+    private DoubleListNode&lt;E&gt; tail;
+    private int size;
+
+    public LinkedList() {
+        head = new DoubleListNode&lt;E&gt;();
+        tail = new DoubleListNode&lt;E&gt;();
+        head.setNext(tail);
+        tail.setPrev(head);
+        size = 0;
+    }
+
+    public void addLast(E item) {
+        DoubleListNode&lt;E&gt; newNode = new DoubleListNode&lt;E&gt;(item, tail.getPrev(), tail);
+        tail.getPrev().setNext(newNode);
+        tail.setPrev(newNode);
+        size++;
+    }
+}
+    </pre>
+
 </body>
 </html>
